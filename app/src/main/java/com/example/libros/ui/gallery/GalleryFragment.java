@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.libros.Interfaces.ProductoApi;
 import com.example.libros.Modelos.Libro;
+import com.example.libros.Modelos.Libro2;
+import com.example.libros.Modelos.Libro3;
 import com.example.libros.R;
 
 import java.util.List;
@@ -25,7 +27,16 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GalleryFragment extends Fragment {
-    private TextView datos;
+    private TextView nombre1;
+    private TextView autor1;
+    private TextView descarga1;
+    private TextView nombre2;
+    private TextView autor2;
+    private TextView descarga2;
+    private TextView nombre3;
+    private TextView autor3;
+    private TextView desccarga3;
+
 
     private GalleryViewModel galleryViewModel;
 
@@ -34,8 +45,17 @@ public class GalleryFragment extends Fragment {
         galleryViewModel =
                 new ViewModelProvider(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.datos);
-        datos=root.findViewById(R.id.datos);
+        final TextView textView = root.findViewById(R.id.nombre1);
+        nombre1=(TextView)root.findViewById(R.id.nombre1);
+        nombre2=(TextView)root.findViewById(R.id.nombre2);
+        nombre3=(TextView)root.findViewById(R.id.nombre3);
+        autor1=(TextView)root.findViewById(R.id.autor1);
+        autor2=(TextView)root.findViewById(R.id.autor2);
+        autor3=(TextView)root.findViewById(R.id.autor3);
+        descarga1=(TextView)root.findViewById(R.id.descarga1);
+        descarga2=(TextView)root.findViewById(R.id.descarga2);
+        desccarga3=(TextView)root.findViewById(R.id.descarga3);
+
         Libros();
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -60,34 +80,91 @@ public class GalleryFragment extends Fragment {
             public void onResponse(Call<List<Libro>> call, Response<List<Libro>> response) {
                 if(!response.isSuccessful())
                 {
-                    datos.setText("Codigo:"+response.code());
+                    nombre1.setText("Codigo:"+response.code());
+                    autor1.setText("Codigo:"+response.code());
+                    descarga1.setText("Codigo:"+response.code());
                     return;
                 }
                 List<Libro> libroList=response.body();
                 for( Libro libro: libroList)
                 {
-                    String content="";
-                    content+="ID: "+ libro.getID()+"\n";
-                    content+="title: "+ libro.getTitle()+"\n";
-                    content+="author: "+ libro.getAuthor()+"\n";
-                    content+="content: "+ libro.getContent()+"\n";
-                    content+="content_short: "+ libro.getContent_short()+"\n";
-                    content+="publisher: "+ libro.getPublisher()+"\n";
-                    content+="publisher_date: "+ libro.getPublisher_date()+"\n";
-                    content+="pages: "+ libro.getPages()+"\n";
-                    content+="language: "+ libro.getLanguage()+"\n";
-                    content+="url_details: "+ libro.getUrl_details()+"\n";
-                    content+="url_download: "+ libro.getUrl_download()+"\n";
-                    content+="cover: "+ libro.getCover()+"\n";
-                    content+="thumbnail: "+ libro.getThumbnail()+"\n";
-                    content+="num_comment: "+ libro.getNum_comments()+"\n\n";
-                    datos.append(content);
+                  nombre1.setText(libro.getTitle());
+                  autor1.setText(libro.getAuthor());
+                  descarga1.setText(libro.getUrl_download());
                 }
             }
 
             @Override
             public void onFailure(Call<List<Libro>> call, Throwable t) {
-                datos.setText(t.getMessage());
+                nombre1.setText(t.getMessage());
+            }
+        });
+    }
+    private  void Libros2()
+    {
+        Retrofit retrofit= new  Retrofit.Builder()
+                .baseUrl("https://www.etnassoft.com/api/v1/get/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ProductoApi productoApi = retrofit.create(ProductoApi.class);
+        Call<List<Libro2>> call=productoApi.getLibro2();
+        call.enqueue(new Callback<List<Libro2>>() {
+            @Override
+            public void onResponse(Call<List<Libro2>> call, Response<List<Libro2>> response) {
+                if(!response.isSuccessful())
+                {
+                    nombre2.setText("Codigo:"+response.code());
+                    autor2.setText("Codigo:"+response.code());
+                    descarga2.setText("Codigo:"+response.code());
+                    return;
+                }
+                List<Libro2> libroList=response.body();
+                for( Libro2 libro: libroList)
+                {
+                    nombre2.setText(libro.getTitle());
+                    autor2.setText(libro.getAuthor());
+                    descarga2.setText(libro.getUrl_download());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Libro2>> call, Throwable t) {
+                nombre2.setText(t.getMessage());
+            }
+        });
+    }
+    private  void Libros3()
+    {
+        Retrofit retrofit= new  Retrofit.Builder()
+                .baseUrl("https://www.etnassoft.com/api/v1/get/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ProductoApi productoApi = retrofit.create(ProductoApi.class);
+        Call<List<Libro3>> call=productoApi.getLibro3();
+        call.enqueue(new Callback<List<Libro3>>() {
+            @Override
+            public void onResponse(Call<List<Libro3>> call, Response<List<Libro3>> response) {
+                if(!response.isSuccessful())
+                {
+                    nombre3.setText("Codigo:"+response.code());
+                    autor3.setText("Codigo:"+response.code());
+                    desccarga3.setText("Codigo:"+response.code());
+                    return;
+                }
+                List<Libro3> libroList=response.body();
+                for( Libro3 libro: libroList)
+                {
+                    nombre3.setText(libro.getTitle());
+                    autor3.setText(libro.getAuthor());
+                    desccarga3.setText(libro.getUrl_download());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Libro3>> call, Throwable t) {
+                nombre3.setText(t.getMessage());
             }
         });
     }
