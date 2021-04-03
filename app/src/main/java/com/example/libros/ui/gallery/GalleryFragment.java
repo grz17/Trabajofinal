@@ -57,6 +57,8 @@ public class GalleryFragment extends Fragment {
         desccarga3=(TextView)root.findViewById(R.id.descarga3);
 
         Libros();
+        Libros2();
+        Libros3();
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
