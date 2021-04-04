@@ -10,100 +10,215 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="39dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Libros"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="casual"
                 android:gravity="center"
-                android:text="Titulo" />
+                android:text="Titulo"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/nombre1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="48dp"
-                android:text="TextView" />
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Autor"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/autor1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="15dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Descarga"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/descarga1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Titulo"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/nombre2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
-                android:layout_marginTop="226dp"
-                android:text="TextView" />
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Autor"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/autor2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Descarga"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/descarga2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Titulo"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/nombre3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="171dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-160dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Autor"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/autor3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="Descarga"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/descarga3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="15dp"
-                android:text="TextView" />
+                android:fontFamily="casual"
+                android:text="TextView"
+                android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
 

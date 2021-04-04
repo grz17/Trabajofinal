@@ -13,9 +13,12 @@
         <activity
             android:name=".Libreria"
             android:label="@string/title_activity_libreria"
-            android:theme="@style/Theme.Libros.NoActionBar"></activity>
-        <activity android:name=".RegistrarUsuario" />
-        <activity android:name=".MainActivity">
+            android:theme="@style/Theme.Libros.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".RegistrarUsuario"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
